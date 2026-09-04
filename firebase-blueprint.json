@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "Ticket": {
+      "title": "Ticket",
+      "description": "Support Ticket registered by a client",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "service": { "type": "string" },
+        "note": { "type": "string" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "timezone": { "type": "string" },
+        "paymentType": { "type": "string" },
+        "ticketNumber": { "type": "string" },
+        "promoCode": { "type": "string" },
+        "createdAt": { "type": "object" },
+        "emailRouting": { "type": "object" }
+      },
+      "required": ["name", "email", "service", "note", "ticketNumber"]
+    },
+    "CouponStats": {
+      "title": "CouponStats",
+      "description": "Counters for coupon usage",
+      "type": "object",
+      "properties": {
+        "usedCount": { "type": "integer" }
+      },
+      "required": ["usedCount"]
+    }
+  },
+  "firestore": {
+    "/tickets": {
+      "schema": "Ticket",
+      "description": "List of support tickets"
+    },
+    "/stats": {
+      "schema": "CouponStats",
+      "description": "Coupon usage metrics document stored under stats collection"
+    }
+  }
+}

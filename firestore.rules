@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Tickets collection: Allow anyone to create, read (for Operator Console), and delete
+    match /tickets/{ticketId} {
+      allow create, read, delete: if true;
+    }
+
+    // Stats collection: Allow reading and updating coupon usage
+    match /stats/{docId} {
+      allow read, write: if true;
+    }
+  }
+}

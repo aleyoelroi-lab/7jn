@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7JN Tech Assist — Premium Portable Edition</title>
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            amber: {
+              450: '#F59E0B',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom style tweaks for deep dark universe theme */
+    body {
+      background-color: #020408;
+      color: #f1f5f9;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* Elegant holographic scanning lines */
+    @keyframes scan {
+      0% { transform: translateY(-100%); }
+      50% { transform: translateY(100%); }
+      100% { transform: translateY(-100%); }
+    }
+    
+    .scanner-line {
+      animation: scan 4s ease-in-out infinite;
+    }
+
+    /* Print styling rules */
+    @media print {
+      body {
+        background: white !important;
+        color: black !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-only {
+        display: block !important;
+      }
+      .print-card {
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        color: black !important;
+      }
+    }
+    
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #020408;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #dfba6b;
+    }
+  </style>
+</head>
+<body class="selection:bg-[#DFBA6B]/30 selection:text-white leading-relaxed antialiased">
+
+  <!-- Header Header -->
+  <header class="sticky top-0 z-50 bg-[#020408]/85 border-b border-[#DFBA6B]/10 backdrop-blur-md no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <!-- Logo Icon -->
+        <div class="w-8 h-8 rounded-full border border-[#DFBA6B] flex items-center justify-center bg-zinc-950 font-display font-black text-xs text-[#DFBA6B] shadow-[0_0_10px_rgba(223,186,107,0.3)]">
+          7JN
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xs font-black tracking-[0.15em] font-sans text-white uppercase leading-none">
+            7JN TECH ASSIST
+          </span>
+          <span class="text-[8px] font-mono text-[#DFBA6B] leading-none tracking-wider mt-0.5">
+            PREMIUM PORTABLE SINGLE-FILE
+          </span>
+        </div>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="#home" class="text-xs font-medium tracking-wider text-zinc-400 hover:text-[#DFBA6B] transition-colors uppercase font-mono">Home</a>
+        <a href="#services" class="text-xs font-medium tracking-wider text-zinc-400 hover:text-[#DFBA6B] transition-colors uppercase font-mono">Services</a>
+        <a href="#resume" class="text-xs font-medium tracking-wider text-zinc-400 hover:text-[#DFBA6B] transition-colors uppercase font-mono">Resume</a>
+        <a href="#packages" class="text-xs font-medium tracking-wider text-zinc-400 hover:text-[#DFBA6B] transition-colors uppercase font-mono">Rates</a>
+        <a href="#schedule" class="text-xs font-medium tracking-wider text-zinc-500 hover:text-[#DFBA6B] transition-colors uppercase font-mono">Book Console</a>
+        <a href="#contact" class="text-xs font-medium tracking-wider text-zinc-500 hover:text-[#DFBA6B] transition-colors uppercase font-mono">FAQs</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#schedule" class="text-[10px] font-mono font-bold tracking-widest text-[#020408] bg-[#DFBA6B] hover:bg-yellow-300 hover:shadow-[0_0_15px_rgba(223,186,107,0.4)] px-4 py-1.5 rounded-md transition-all uppercase">
+          SECURE BOOKING
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home" class="relative overflow-hidden pt-12 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-24">
+    
+    <!-- Hero / Intro -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-8">
+      <div class="lg:col-span-7 space-y-6 text-left">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-zinc-950 border border-[#DFBA6B]/20 rounded-full font-mono text-[10px] text-[#DFBA6B] uppercase tracking-widest">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          Senior Technical Advisor & Consultant
+        </div>
+        
+        <h1 class="text-3xl sm:text-5xl font-display font-black tracking-tight text-white leading-tight">
+          Sizing operational challenges.<br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-[#DFBA6B] to-yellow-400">
+            Automating elite solutions.
+          </span>
+        </h1>
+        
+        <p class="text-sm md:text-base text-zinc-400 leading-relaxed font-sans max-w-2xl">
+          Hi, I am <strong class="text-white font-semibold">Jeddah San T. Pait</strong>. I establish responsive web platforms, deploy advanced analytical reports, clear security bottlenecks, and scale zero-overhead workflows. Get standard enterprise solutions customized directly for your brand.
+        </p>
+        
+        <div class="pt-2 flex flex-wrap gap-3">
+          <a href="#schedule" class="text-xs font-mono font-bold tracking-wider px-5 py-3 hover:text-white border-2 border-[#DFBA6B] hover:bg-[#DFBA6B]/25 text-[#DFBA6B] rounded-lg transition-all flex items-center gap-2">
+            <i data-lucide="calendar" class="w-4 h-4"></i> SCHEDULE AN INITIAL REVIEW
+          </a>
+          <a href="#services" class="text-xs font-mono text-zinc-300 hover:text-white px-5 py-3 border border-zinc-800 hover:border-zinc-700 bg-zinc-950/40 rounded-lg transition-all flex items-center gap-2">
+            EXPLORE SERVICE DIRECTORY
+          </a>
+        </div>
+      </div>
+
+      <!-- Profile Container Box with Photo Dropper -->
+      <div class="lg:col-span-5 relative">
+        <div class="bg-[#020408] border border-zinc-900 rounded-2xl p-4 space-y-4 relative">
+          <!-- Picture view -->
+          <div id="profile-container" class="w-full aspect-square rounded-xl overflow-hidden border border-zinc-900 bg-zinc-950 relative cursor-pointer group">
+            
+            <!-- Hidden profile input -->
+            <input type="file" id="profile-file-input" class="hidden" accept="image/*">
+
+            <!-- Hover overlay -->
+            <div class="absolute inset-0 bg-black/80 flex flex-col items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100 font-sans z-30">
+              <div class="text-center px-4 py-2 border border-[#DFBA6B]/40 rounded-lg bg-black/80 shadow-2xl backdrop-blur-sm">
+                <span id="profile-drop-text" class="text-[10px] font-black text-white uppercase tracking-[0.2em] block mb-1">
+                  📸 CLICK OR DROP IMAGE
+                </span>
+                <span class="text-[8px] font-mono text-[#DFBA6B] tracking-wider block">
+                  Sync custom personal portrait
+                </span>
+              </div>
+            </div>
+
+            <!-- Face Scanner laser animation -->
+            <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-yellow-200 to-transparent shadow-[0_0_12px_#fde047] scanner-line z-20" style="position: absolute;"></div>
+
+            <!-- Profile image display -->
+            <img id="profile-img" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=80" 
+                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale hover:grayscale-0" alt="Jeddah San T. Pait Profile Headshot">
+          </div>
+
+          <!-- Bottom profile label details -->
+          <div class="space-y-1">
+            <div class="flex items-center justify-between text-xs">
+              <span class="font-mono text-[#DFBA6B] font-bold">JEDDAH SAN T. PAIT</span>
+              <span class="text-[10px] text-zinc-500 font-mono tracking-widest">VP RECIPIENT</span>
+            </div>
+            <p class="text-[10px] text-zinc-400 font-mono leading-relaxed">
+              Senior Analyst II, Financial Operations, CRM Optimization, Alteryx Process Automation, & Full-Stack Web Architecture.
+            </p>
+
+            <!-- Interactive Security Lock/Unlock Panel for Portable Website -->
+            <div class="flex items-center justify-between bg-zinc-950/80 border border-zinc-900 rounded-xl px-3 py-2 text-[10px] font-mono mt-3">
+              <div class="flex items-center gap-1.5 select-none">
+                <span id="lock-icon" class="text-emerald-400 font-bold">🛡️</span>
+                <span id="lock-status-text" class="text-zinc-400 font-bold tracking-wider">🔒 LIVE LOCKED</span>
+              </div>
+              <button id="lock-btn" onclick="toggleLockPortable()" class="px-2.5 py-1 rounded text-[9px] uppercase font-bold tracking-widest bg-yellow-500/10 text-[#DFBA6B] border border-[#DFBA6B]/20 hover:bg-yellow-500/20 transition-all font-mono">
+                Unlock
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hologram constellation interactive widget -->
+    <div class="space-y-4">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 border-b border-zinc-900 pb-3">
+        <div>
+          <h2 class="text-lg font-display font-medium text-white tracking-tight flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#DFBA6B] animate-ping"></span> Interactive Systems Constellation
+          </h2>
+          <p class="text-[11px] text-zinc-500 font-mono">
+            Drag the background to spin the coordinate nodes. Links take you directly to your targets.
+          </p>
+        </div>
+        
+        <!-- Controls -->
+        <div class="flex items-center gap-3 bg-zinc-950 border border-zinc-800 px-3 py-1.5 rounded-lg text-xs font-mono">
+          <button onclick="zoomOutCanvas()" class="hover:text-[#DFBA6B] font-bold px-1 transition-colors">ZOOM OUT</button>
+          <span id="canvas-zoom-text" class="text-zinc-500">120%</span>
+          <button onclick="zoomInCanvas()" class="hover:text-[#DFBA6B] font-bold px-1 transition-colors">ZOOM IN</button>
+        </div>
+      </div>
+
+      <!-- Container that fits the canvas -->
+      <div class="relative w-full h-[500px] bg-[#020408] border border-yellow-500/10 rounded-2xl overflow-hidden shadow-[inset_0_0_50px_rgba(254,240,138,0.05)] group">
+        
+        <canvas id="constellationCanvas" class="w-full h-full cursor-grab active:cursor-grabbing block"></canvas>
+
+        <!-- Tooltip overlay -->
+        <div id="canvas-tooltip" class="absolute hidden z-45 bg-zinc-950/95 border-2 border-yellow-500/50 hover:border-yellow-400 p-4 rounded-xl shadow-2xl text-left cursor-pointer transition-all max-w-[280px] pointer-events-auto">
+          <div class="flex items-center justify-between mb-1">
+            <h4 class="text-[10px] uppercase font-extrabold text-yellow-500 tracking-wider">
+              📍 Linked Star Coordinates
+            </h4>
+          </div>
+          <h3 id="tooltip-title" class="text-sm font-bold text-white mb-2 font-display"></h3>
+          <p id="tooltip-desc" class="text-xs text-zinc-400 font-mono leading-relaxed mb-3"></p>
+          <div class="text-[10px] text-yellow-500 font-semibold font-mono border-t border-zinc-900 pt-2 flex items-center justify-between">
+            <span>TRIGGER WEB ACTION</span>
+            <span class="underline">GO TO SECTION</span>
+          </div>
+        </div>
+
+        <div class="absolute bottom-4 left-4 pointer-events-none bg-zinc-950/80 px-3 py-1.5 border border-zinc-800/60 rounded-lg">
+          <p class="text-[10px] text-zinc-400 font-mono">
+            <strong class="text-yellow-400">Hold Drag</strong> to rotate sphere • <strong class="text-yellow-400">Click star</strong> or its tag for fast navigation
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Services Directory Section -->
+    <div id="services" class="space-y-12 pt-12">
+      <div class="text-center space-y-3 max-w-2xl mx-auto">
+        <h2 class="text-sm font-mono text-[#DFBA6B] uppercase font-black tracking-[0.3em]">
+          CORE SERVICES DIRECTORY
+        </h2>
+        <h3 class="text-2xl sm:text-3xl font-display font-medium text-white tracking-tight">
+          Tailored Business Deployments
+        </h3>
+        <p class="text-xs sm:text-sm text-zinc-400">
+          Professional workspace automation setups, structured knowledge management tools, custom client trackers, and executive metrics dashboards.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Service 1 -->
+        <div class="bg-zinc-950 border border-zinc-900 hover:border-[#DFBA6B]/30 p-5 rounded-xl space-y-4 transition-all duration-300">
+          <div class="text-3xl">🎫</div>
+          <h4 class="text-base font-bold text-white font-display">Ticketing & Support Workflow</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed font-sans">
+            Scale routing pipelines, optimize response time metrics with clean triggers, SLM models, and searchable KB resources.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="text-[9px] font-mono bg-zinc-900 text-zinc-400 px-2 py-0.5 rounded">Zendesk</span>
+            <span class="text-[9px] font-mono bg-zinc-900 text-zinc-400 px-2 py-0.5 rounded">Freshdesk</span>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-zinc-950 border border-zinc-900 hover:border-[#DFBA6B]/30 p-5 rounded-xl space-y-4 transition-all duration-300">
+          <div class="text-3xl">📊</div>
+          <h4 class="text-base font-bold text-white font-display">Project Management System</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed font-sans">
+            Full milestone mapping, task-boards architecture, time trackers, and alert reminders suited to scale client satisfaction.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="text-[9px] font-mono bg-zinc-900 text-zinc-400 px-2 py-0.5 rounded">Asana</span>
+            <span class="text-[9px] font-mono bg-zinc-900 text-zinc-400 px-2 py-0.5 rounded">Monday.com</span>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-zinc-950 border border-zinc-900 hover:border-[#DFBA6B]/30 p-5 rounded-xl space-y-4 transition-all duration-300">
+          <div class="text-3xl">⚙️</div>
+          <h4 class="text-base font-bold text-white font-display">SOPs & Operational Manuals</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed font-sans">
+            Structured SOP instructions, markdown guides, client onboarding sequences, and complete repository handovers.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="text-[9px] font-mono bg-zinc-900 text-zinc-400 px-2 py-0.5 rounded">Notion</span>
+            <span class="text-[9px] font-mono bg-zinc-900 text-zinc-400 px-2 py-0.5 rounded">GitBook</span>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-zinc-950 border border-zinc-900 hover:border-[#DFBA6B]/30 p-5 rounded-xl space-y-4 transition-all duration-300">
+          <div class="text-3xl">📈</div>
+          <h4 class="text-base font-bold text-white font-display">Excel & Power BI Visualization</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed font-sans">
+            ETL pipelines, interactive dashboard visualizations, structured financial pricing, and automated metrics tracking.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="text-[9px] font-mono bg-zinc-900 text-zinc-400 px-2 py-0.5 rounded">Excel</span>
+            <span class="text-[9px] font-mono bg-zinc-900 text-zinc-400 px-2 py-0.5 rounded">Power BI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Printable & Interactive Resume -->
+    <div id="resume" class="space-y-8 pt-12">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-zinc-900 pb-4 no-print">
+        <div>
+          <h2 class="text-xs font-mono text-[#DFBA6B] uppercase font-black tracking-widest leading-none">
+            PROFESSIONAL PORTFOLIO & RECOGNITION
+          </h2>
+          <h3 class="text-xl sm:text-2xl font-display font-medium text-white tracking-tight mt-1">
+            Interactive Digital CV
+          </h3>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="text-xs font-mono px-4 py-2 border border-[#DFBA6B]/30 text-[#DFBA6B] hover:text-white hover:bg-[#DFBA6B]/15 rounded-md transition-all flex items-center gap-1.5">
+            <i data-lucide="printer" class="w-3.5 h-3.5"></i> PRINT PRESTIGE CV
+          </button>
+        </div>
+      </div>
+
+      <!-- Resume Core Paper Layout -->
+      <div class="bg-zinc-950 border border-zinc-900 rounded-2xl p-6 md:p-8 space-y-8 print-card">
+        
+        <!-- Resume Header -->
+        <div class="flex flex-col lg:flex-row items-center lg:items-start gap-6 border-b-2 border-[#DFBA6B]/30 pb-6">
+          <div class="relative w-28 h-28 rounded-full overflow-hidden border-4 border-[#DFBA6B] bg-zinc-900 shrink-0">
+            <img id="resume-profile-img" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+          </div>
+          <div class="space-y-2 text-center lg:text-left flex-1">
+            <h1 class="text-2xl md:text-3xl font-display font-black text-white">Jeddah San T. Pait</h1>
+            <p class="text-xs md:text-sm font-mono text-[#DFBA6B] font-bold">Senior Analyst II & Technical Consultant</p>
+            <p class="text-xs text-zinc-400 font-sans leading-relaxed max-w-xxl">
+              Specialized in engineering strategic process automations, CRM escalation architectures, home loan relationship offer calculator formulation, and live dynamic internal workflow tracking systems. VP Award winner at a major financial institution.
+            </p>
+          </div>
+        </div>
+
+        <!-- Work Experience Tab View -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-6 border-b border-zinc-900">
+          <div class="lg:col-span-4 space-y-4">
+            <h3 class="text-xs uppercase font-extrabold text-[#DFBA6B] font-mono tracking-widest">
+              Core Technical Skills
+            </h3>
+            <div class="space-y-3 font-mono text-xs">
+              <div>
+                <span class="text-white block font-bold">Data & Finance:</span>
+                <span class="text-zinc-400">RPP Pricing Models, Advanced Alteryx Automation Processes, FSO Audits, mortgage pipelines.</span>
+              </div>
+              <div>
+                <span class="text-white block font-bold">Web Development:</span>
+                <span class="text-zinc-400">HTML5/CSS3 Responsive Frameworks, Node.js scripts, API configuration.</span>
+              </div>
+              <div>
+                <span class="text-white block font-bold">Key Certifications:</span>
+                <span class="text-zinc-400">Alteryx Green Belt Certified, Product Owner Foundations.</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="lg:col-span-8 space-y-6">
+            <h3 class="text-xs uppercase font-extrabold text-white font-mono tracking-widest border-b border-zinc-900 pb-1.5 flex items-center gap-1.5">
+              <i data-lucide="briefcase" class="w-3.5 h-3.5 text-[#DFBA6B]"></i> Select Professional Milestones
+            </h3>
+
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <h4 class="text-sm font-bold text-white font-display">Technical Founder (Freelance)</h4>
+                <span class="text-[10px] font-mono text-zinc-500">2026 – Present</span>
+              </div>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Develop fully customized, highly responsive digital assets, establishing zero-overhead client communication channels, domain integrations, and live production deployments with high client feedback scores.
+              </p>
+            </div>
+
+            <div class="space-y-2 border-l border-zinc-900 pl-4">
+              <div class="flex items-center justify-between">
+                <h4 class="text-sm font-bold text-white font-display">Senior Analyst II — Global Banking Corp</h4>
+                <span class="text-[10px] font-mono text-zinc-500">2019 – Present</span>
+              </div>
+              <p class="text-xs text-zinc-400 leading-relaxed">
+                Formulate RPP models to dictate precise pricing metrics on home lending products. Designed advanced Alteryx automation processes connecting drop repositories safely downstream to eliminate manual queuing issues. Awarded VP recognition for dual-tasking governance during strategic initiatives on government lending allocations.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Awards Segment -->
+        <div class="bg-[#DFBA6B]/5 border border-[#DFBA6B]/25 p-4 rounded-xl flex items-start gap-3">
+          <i data-lucide="award" class="w-5 h-5 text-[#DFBA6B] shrink-0 mt-0.5"></i>
+          <div>
+            <span class="text-xs font-mono font-black text-[#DFBA6B] tracking-wider block">VP operational Recognition Medal (Business Analysis Manila)</span>
+            <p class="text-[11px] text-zinc-400 font-sans mt-1">
+              Outstanding contribution in managing high-volume Drcomms reporting queues while simultaneously designing automated queue allocations for specialized Government loans. Approved directly by the BA Vice President.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Packages Rates Section -->
+    <div id="packages" class="space-y-12 pt-12">
+      <div class="text-center space-y-3">
+        <h2 class="text-sm font-mono text-[#DFBA6B] uppercase font-black tracking-widest">
+          SERVICE RATES & INVESTMENTS
+        </h2>
+        <h3 class="text-xl sm:text-2xl font-display font-medium text-white tracking-tight">
+          Flexible Pricing Frameworks
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <!-- Package 1 -->
+        <div class="bg-zinc-950 border border-zinc-900 hover:border-[#DFBA6B]/40 p-6 rounded-2xl relative space-y-6 transition-all duration-300">
+          <div class="space-y-1">
+            <span class="text-[10px] font-mono text-[#DFBA6B] tracking-widest font-black uppercase">Starter Plan</span>
+            <h4 class="text-xl font-bold text-white">Starter</h4>
+          </div>
+          <div class="flex items-baseline gap-1">
+            <span class="text-3xl font-bold font-display text-white">$299</span>
+            <span class="text-xs text-zinc-500 font-mono">/project</span>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Essential setups to organize customer queries. Perfect for freelancers or small teams needing basic ticket routing rules.
+          </p>
+          <ul class="text-[11px] font-mono text-zinc-400 space-y-2 border-t border-zinc-900 pt-4">
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-[#DFBA6B]"></i> SLA Configuration</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-[#DFBA6B]"></i> Basic automation rules</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-[#DFBA6B]"></i> 1 Knowledge desk SOP</li>
+          </ul>
+        </div>
+
+        <!-- Package 2 - Featured -->
+        <div class="bg-zinc-950 border-2 border-[#DFBA6B] p-6 rounded-2xl relative space-y-6 shadow-[0_0_20px_rgba(223,186,107,0.1)]">
+          <span class="absolute -top-3.5 right-6 text-[8px] font-mono tracking-widest font-extrabold bg-[#DFBA6B] text-[#020408] px-2.5 py-1 rounded-full">
+            RECOMMENDED
+          </span>
+          <div class="space-y-1">
+            <span class="text-[10px] font-mono text-[#DFBA6B] tracking-widest font-black uppercase">Professional Plan</span>
+            <h4 class="text-xl font-bold text-white">Professional</h4>
+          </div>
+          <div class="flex items-baseline gap-1">
+            <span class="text-3xl font-bold font-display text-white">$799</span>
+            <span class="text-xs text-zinc-500 font-mono">/project</span>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Highly integrated core. Best suited for established companies requiring deep Slack/Teams triggers, custom dashboards, & SOP wikis.
+          </p>
+          <ul class="text-[11px] font-mono text-zinc-400 space-y-2 border-t border-[#DFBA6B]/20 pt-4">
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-[#DFBA6B]"></i> 10 Automation triggers</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-[#DFBA6B]"></i> Secure central database portal</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-[#DFBA6B]"></i> High-density analytics reports</li>
+          </ul>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="bg-zinc-950 border border-zinc-900 hover:border-[#DFBA6B]/40 p-6 rounded-2xl relative space-y-6 transition-all duration-300">
+          <div class="space-y-1">
+            <span class="text-[10px] font-mono text-[#DFBA6B] tracking-widest font-black uppercase">Enterprise Plan</span>
+            <h4 class="text-xl font-bold text-white">Enterprise</h4>
+          </div>
+          <div class="flex items-baseline gap-1">
+            <span class="text-3xl font-bold font-display text-white">Custom</span>
+            <span class="text-xs text-zinc-500 font-mono">Quotes</span>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Ultimate tech integration including 24/7 weekend standby support, comprehensive cloud structures, and secure multi-tier database pipelines.
+          </p>
+          <ul class="text-[11px] font-mono text-zinc-400 space-y-2 border-t border-zinc-900 pt-4">
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-[#DFBA6B]"></i> Unlimited custom triggers</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-[#DFBA6B]"></i> Security audit reports</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-[#DFBA6B]"></i> Dedicated weekend support desk</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Interactive Booking Form Segment with Swappable QR -->
+    <div id="schedule" class="pt-12 max-w-4xl mx-auto">
+      <div class="bg-zinc-950 border border-zinc-900 rounded-2xl p-6 md:p-8 space-y-6">
+        <div class="text-center space-y-2 max-w-xl mx-auto">
+          <span class="text-[9px] font-mono bg-yellow-500/10 border border-yellow-500/20 text-[#DFBA6B] px-3 py-1 rounded-full uppercase tracking-wider">
+            SECURE CONSULTATION GATEWAY
+          </span>
+          <h2 class="text-xl font-display font-bold text-white">Declare Booking Scoping</h2>
+          <p class="text-xs text-zinc-400 font-mono">
+            Register your ticketing schedule and custom parameters. Fully compliant parameters are stored inside local storage memories.
+          </p>
+        </div>
+
+        <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="space-y-4 text-left">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Full Name -->
+            <div class="space-y-1">
+              <label class="text-[10px] font-mono text-zinc-500 uppercase font-black">Full Name *</label>
+              <input type="text" required class="w-full bg-[#020408] border border-zinc-900 focus:border-[#DFBA6B] focus:ring-1 focus:ring-[#DFBA6B]/20 text-xs px-3 py-2 rounded font-sans text-white outline-none">
+            </div>
+
+            <!-- Email Address -->
+            <div class="space-y-1">
+              <label class="text-[10px] font-mono text-zinc-500 uppercase font-black">Email Address *</label>
+              <input type="email" required class="w-full bg-[#020408] border border-zinc-900 focus:border-[#DFBA6B] focus:ring-1 focus:ring-[#DFBA6B]/20 text-xs px-3 py-2 rounded font-sans text-white outline-none">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <!-- Date -->
+            <div class="space-y-1">
+              <label class="text-[10px] font-mono text-zinc-500 uppercase font-black">Scoping Year / Date *</label>
+              <input type="date" required class="w-full bg-[#020408] border border-zinc-900 focus:border-[#DFBA6B] text-xs px-3 py-2 rounded font-mono text-zinc-400 outline-none">
+            </div>
+
+            <!-- Timezone -->
+            <div class="space-y-1">
+              <label class="text-[10px] font-mono text-zinc-500 uppercase font-black">Timezone Selection</label>
+              <select class="w-full bg-[#020408] border border-zinc-900 focus:border-[#DFBA6B] text-xs px-3 py-2 rounded font-mono text-white outline-none">
+                <option value="EST">EST — Eastern Standard</option>
+                <option value="PST">PST — Pacific Standard</option>
+                <option value="GMT">GMT — Greenwich Mean</option>
+                <option value="PH">PHT — Philippines Time</option>
+              </select>
+            </div>
+
+            <!-- Package selection -->
+            <div class="space-y-1">
+              <label class="text-[10px] font-mono text-zinc-500 uppercase font-black">Scoping Package</label>
+              <select class="w-full bg-[#020408] border border-zinc-900 focus:border-[#DFBA6B] text-xs px-3 py-2 rounded font-mono text-white outline-none">
+                <option value="starter">Starter Support ($299)</option>
+                <option value="professional">Professional Integrated ($799)</option>
+                <option value="enterprise">Enterprise Customized Scope</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Checkout payment preference tabs -->
+          <div class="space-y-2 border-t border-zinc-900 pt-4">
+            <label class="text-[10px] font-mono text-zinc-500 uppercase font-black block">Investment Preference</label>
+            <div class="grid grid-cols-2 gap-3">
+              <button type="button" onclick="setPaymentType('later')" id="pay-later-tab" class="bg-[#DFBA6B]/10 border-2 border-[#DFBA6B] text-white py-2 text-xs font-mono font-bold rounded-lg transition-all">
+                🗓️ PAY LATER (COMPLIMENTARY INITIAL CHAT)
+              </button>
+              <button type="button" onclick="setPaymentType('now')" id="pay-now-tab" class="bg-zinc-950 border border-zinc-900 hover:border-zinc-800 text-zinc-400 hover:text-white py-2 text-xs font-mono font-bold rounded-lg transition-all">
+                ⚡ SECURE RETENTION TRANSACTION (PAY NOW)
+              </button>
+            </div>
+          </div>
+
+          <!-- Custom QR Drag & Drop Box -->
+          <div id="payment-qr-container" class="hidden animate-fade-in space-y-4">
+            <div class="p-5 bg-zinc-900/40 border-2 border-dashed border-[#DFBA6B]/20 rounded-xl text-center space-y-3">
+              <span class="text-xs uppercase font-extrabold text-[#EAD890] tracking-wider flex items-center justify-center gap-1.5">
+                <i data-lucide="credit-card" class="w-3.5 h-3.5"></i> Unified Scan Terminal
+              </span>
+              
+              <div id="qr-drop-box" class="w-40 h-40 bg-white p-2 rounded-xl mx-auto flex items-center justify-center border-2 border-[#DFBA6B]/30 relative group cursor-pointer overflow-hidden transition-all duration-300">
+                <input type="file" id="qr-file-input" class="hidden" accept="image/*">
+                
+                <!-- Hover/Drop Overlay -->
+                <div class="absolute inset-0 bg-black/85 flex flex-col items-center justify-center transition-opacity duration-300 opacity-0 group-hover:opacity-100 font-sans">
+                  <div class="text-center p-2">
+                    <span id="qr-drop-text" class="text-[9px] font-sans font-black text-white uppercase tracking-widest block mb-0.5">
+                      📸 DROP OR CLICK
+                    </span>
+                    <span class="text-[7.5px] font-mono text-[#DFBA6B] tracking-wider block">To swap payment channel</span>
+                  </div>
+                </div>
+
+                <img id="payment-qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.7jntech.com/secure-payment" class="w-full h-full object-contain">
+              </div>
+
+              <p class="text-[10px] text-zinc-400 font-mono">
+                Scan using standard bank credentials or PayPal to initiate securely. Operations trigger upon verification.
+              </p>
+              
+              <div class="text-[9px] text-[#DFBA6B] font-mono bg-zinc-950/40 p-2 rounded-lg border border-zinc-950 leading-snug">
+                💡 <strong>Direct Customizing:</strong> Drop your own payment QR code graphic exactly on the white container box above to change payment paths on the fly!
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-3 border-t border-zinc-900 pt-4 font-mono text-[10px] text-zinc-500">
+            <div class="flex items-start gap-2">
+              <input type="checkbox" required id="nda-check" class="mt-0.5 accent-[#DFBA6B]">
+              <label for="nda-check" class="leading-normal">
+                I hereby declare and understand the scoping terms. All shared variables, directories, and files will be processed strictly under non-disclosure governance (NDAs).
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="w-full bg-[#DFBA6B] hover:bg-yellow-400 text-[#020408] font-bold py-3 text-xs tracking-widest uppercase rounded-lg shadow-xl transition-all font-mono">
+            CONFIRM Scoping BOOKING
+          </button>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- FAQs Segment -->
+    <div id="contact" class="space-y-12 pt-12">
+      <div class="text-center space-y-3">
+        <h2 class="text-sm font-mono text-[#DFBA6B] uppercase font-black tracking-widest">
+          FREQUENTLY ASKED QUESTIONS
+        </h2>
+        <h3 class="text-xl sm:text-2xl font-display font-medium text-white tracking-tight">
+          Operational Security & Handovers
+        </h3>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-3">
+        <!-- FAQ 1 -->
+        <div class="bg-zinc-950 border border-zinc-900 rounded-xl overflow-hidden">
+          <button onclick="toggleFaq('faq-1')" class="w-full px-5 py-4 text-left flex items-center justify-between text-xs sm:text-sm font-bold text-white font-display hover:bg-zinc-900/30 transition-all">
+            <span>How quickly can we start operations?</span>
+            <i data-lucide="chevron-down" id="faq-1-icon" class="w-4 h-4 text-[#DFBA6B] transition-transform duration-300"></i>
+          </button>
+          <div id="faq-1-body" class="hidden px-5 pb-4 text-xs font-mono text-zinc-400 border-t border-zinc-900/40 pt-2 leading-relaxed">
+            Most technical configurations and reviews kick off within 48 hours of agreement sign-off. For high-priority projects or custom automations under Enterprise channels, accelerated same-day starts can be organized after direct scope reviews.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="bg-zinc-950 border border-zinc-900 rounded-xl overflow-hidden">
+          <button onclick="toggleFaq('faq-2')" class="w-full px-5 py-4 text-left flex items-center justify-between text-xs sm:text-sm font-bold text-white font-display hover:bg-zinc-900/30 transition-all">
+            <span>Do you offer post-launch maintenance?</span>
+            <i data-lucide="chevron-down" id="faq-2-icon" class="w-4 h-4 text-[#DFBA6B] transition-transform duration-300"></i>
+          </button>
+          <div id="faq-2-body" class="hidden px-5 pb-4 text-xs font-mono text-zinc-400 border-t border-zinc-900/40 pt-2 leading-relaxed">
+            Yes, absolutely! Every single website design or process automation package includes exactly 1-Month of complimentary technical maintenance checks.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="bg-zinc-950 border border-zinc-900 rounded-xl overflow-hidden">
+          <button onclick="toggleFaq('faq-3')" class="w-full px-5 py-4 text-left flex items-center justify-between text-xs sm:text-sm font-bold text-white font-display hover:bg-zinc-900/30 transition-all">
+            <span>What protocols keep client data safe?</span>
+            <i data-lucide="chevron-down" id="faq-3-icon" class="w-4 h-4 text-[#DFBA6B] transition-transform duration-300"></i>
+          </button>
+          <div id="faq-3-body" class="hidden px-5 pb-4 text-xs font-mono text-zinc-400 border-t border-zinc-900/40 pt-2 leading-relaxed">
+            I implement standard banking security configurations: multi-factor tokens (MFA) across all control panels, end-to-end encrypted repositories, zero raw password stores (Vault storage), and binding digital NDAs.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="bg-zinc-950/60 border-t border-zinc-900 py-12 px-4 text-center text-xs font-mono text-zinc-500 no-print">
+    <div class="max-w-7xl mx-auto space-y-4">
+      <div class="flex items-center justify-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
+        <span>Secure Static Production Environment Live</span>
+      </div>
+      <p class="max-w-md mx-auto leading-relaxed">
+        7JNTECH ASSIST • Tailor-made workflows, enterprise integrations, mortgage lending analytical diagnostics, and custom software utilities.
+      </p>
+      <div class="pt-2 text-[10px]">
+        &copy; 2026 Jeddah San T. Pait. All rights in standard templates reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Javascript Controllers for Hologram and Interactive Elements -->
+  <script>
+    // Initialize icons
+    lucide.createIcons();
+
+    // 1. FAQ ACCORDION HANDLERS
+    function toggleFaq(id) {
+      const body = document.getElementById(id + '-body');
+      const icon = document.getElementById(id + '-icon');
+      if (body.classList.contains('hidden')) {
+        body.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        body.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    // 2. PAYMENT TAB HANDLERS
+    let paymentPreference = 'later';
+    function setPaymentType(type) {
+      paymentPreference = type;
+      const laterTab = document.getElementById('pay-later-tab');
+      const nowTab = document.getElementById('pay-now-tab');
+      const details = document.getElementById('payment-qr-container');
+
+      if (type === 'later') {
+        laterTab.className = "bg-[#DFBA6B]/10 border-2 border-[#DFBA6B] text-white py-2 text-xs font-mono font-bold rounded-lg transition-all";
+        nowTab.className = "bg-zinc-950 border border-zinc-900 hover:border-zinc-800 text-zinc-400 hover:text-white py-2 text-xs font-mono font-bold rounded-lg transition-all";
+        details.classList.add('hidden');
+      } else {
+        nowTab.className = "bg-[#DFBA6B]/10 border-2 border-[#DFBA6B] text-white py-2 text-xs font-mono font-bold rounded-lg transition-all";
+        laterTab.className = "bg-zinc-950 border border-zinc-900 hover:border-zinc-800 text-zinc-400 hover:text-white py-2 text-xs font-mono font-bold rounded-lg transition-all";
+        details.classList.remove('hidden');
+      }
+    }
+
+    // 3. SECURE LOCAL STORAGE AND DYNAMIC DRAG/DROP IMPLEMENTATIONS
+    // Re-sample custom graphics/photographic materials cleanly
+    function compressImageFile(file, maxDim, quality, callback) {
+      const imgReader = new FileReader();
+      imgReader.onload = function(evt) {
+        const imageObj = new Image();
+        imageObj.onload = function() {
+          const canvasObj = document.createElement("canvas");
+          let w = imageObj.width;
+          let h = imageObj.height;
+          if (w > h) {
+            if (w > maxDim) {
+              h = Math.round((h * maxDim) / w);
+              w = maxDim;
+            }
+          } else {
+            if (h > maxDim) {
+              w = Math.round((w * maxDim) / h);
+              h = maxDim;
+            }
+          }
+          canvasObj.width = w;
+          canvasObj.height = h;
+          const ctxBuffer = canvasObj.getContext("2d");
+          ctxBuffer.imageSmoothingEnabled = true;
+          ctxBuffer.imageSmoothingQuality = "high";
+          ctxBuffer.drawImage(imageObj, 0, 0, w, h);
+          callback(canvasObj.toDataURL("image/jpeg", quality));
+        };
+        imageObj.src = evt.target.result;
+      };
+      imgReader.readAsDataURL(file);
+    }
+
+    // Profiles trigger bindings
+    let isEditorLocked = true; // Hardcoded default lock to protect the CV!
+
+    const profileBox = document.getElementById('profile-container');
+    const profileInput = document.getElementById('profile-file-input');
+    const profileImg = document.getElementById('profile-img');
+    const resumeImg = document.getElementById('resume-profile-img');
+    const profileDropText = document.getElementById('profile-drop-text');
+
+    // Restore cached elements if present
+    const savedPic = localStorage.getItem("7jn_profile_image");
+    if(savedPic) {
+      profileImg.src = savedPic;
+      resumeImg.src = savedPic;
+    }
+
+    // Interactive portable security toggle
+    window.toggleLockPortable = function() {
+      const statusText = document.getElementById('lock-status-text');
+      const lockIcon = document.getElementById('lock-icon');
+      const lockBtn = document.getElementById('lock-btn');
+      
+      if (isEditorLocked) {
+        const pin = prompt("🔐 ENTER ACCESS PASSCODE TO UNLOCK CUSTOM PORTFOLIO UPDATES:\n(Default access PIN is '7jntech')");
+        if (pin === "7jntech" || pin === "7jnadmin") {
+          isEditorLocked = false;
+          statusText.textContent = "🔓 LIVE UNLOCKED";
+          statusText.className = "text-yellow-400 font-bold tracking-wider";
+          lockIcon.textContent = "🛡️";
+          lockIcon.className = "text-yellow-400 font-bold";
+          lockBtn.textContent = "Freeze Updates";
+          lockBtn.className = "px-2.5 py-1 rounded text-[9px] uppercase font-bold tracking-widest bg-red-500/10 text-red-400 border border-red-500/20 hover:bg-red-500/20 transition-all font-mono";
+          
+          // Update overlays
+          profileDropText.innerHTML = "📸 CLICK OR DROP IMAGE";
+          const qrDropText = document.getElementById('qr-drop-text');
+          if (qrDropText) qrDropText.innerHTML = "📸 DROP OR CLICK";
+          
+          alert("🔓 ACCESS GRANTED! System is now in edit mode. You can drop or select custom pictures and payment QR codes.");
+        } else if (pin !== null) {
+          alert("⚠️ ACCESS DENIED! Incorrect passcode. System remains secured.");
+        }
+      } else {
+        isEditorLocked = true;
+        statusText.textContent = "🔒 LIVE LOCKED";
+        statusText.className = "text-zinc-400 font-bold tracking-wider";
+        lockIcon.textContent = "🛡️";
+        lockIcon.className = "text-emerald-400 font-bold";
+        lockBtn.textContent = "Unlock";
+        lockBtn.className = "px-2.5 py-1 rounded text-[9px] uppercase font-bold tracking-widest bg-yellow-500/10 text-[#DFBA6B] border border-[#DFBA6B]/20 hover:bg-yellow-500/20 transition-all font-mono";
+        
+        // Update overlays
+        profileDropText.innerHTML = "🔒 PORTRAIT SECURED (Tap Unlock to bypass)";
+        const qrDropText = document.getElementById('qr-drop-text');
+        if (qrDropText) qrDropText.innerHTML = "🔒 PORT SECURE (Change Locked)";
+        
+        alert("🔒 SYSTEM SECURED Successfully!");
+      }
+    };
+
+    profileBox.addEventListener('click', () => {
+      if (isEditorLocked) {
+        const chooseUnlock = confirm("🔒 PORTRAIT IS SECURED!\n\nThis portfolio is locked to prevent random visitors from altering your profile photo.\n\nWould you like to enter the Master PIN to unlock now?");
+        if (chooseUnlock) {
+          window.toggleLockPortable();
+        }
+        return;
+      }
+      profileInput.click();
+    });
+
+    profileInput.addEventListener('change', (e) => {
+      if (isEditorLocked) return;
+      const file = e.target.files[0];
+      if (file) handleProfileUpload(file);
+    });
+
+    // Drag-over effects on profiles
+    profileBox.addEventListener('dragenter', (e) => { 
+      if (isEditorLocked) return;
+      e.preventDefault(); 
+      profileDropText.textContent = "⚡ DROP PHOTO NOW"; 
+    });
+    profileBox.addEventListener('dragover', (e) => { e.preventDefault(); });
+    profileBox.addEventListener('dragleave', () => { 
+      if (isEditorLocked) return;
+      profileDropText.textContent = "📸 CLICK OR DROP IMAGE"; 
+    });
+    profileBox.addEventListener('drop', (e) => {
+      e.preventDefault();
+      if (isEditorLocked) {
+        alert("🔒 PORTRAIT IS SECURELY LOCKED! To alter this graphic, you must authenticate through the Master Lock Panel first.");
+        return;
+      }
+      profileDropText.textContent = "📸 CLICK OR DROP IMAGE";
+      const file = e.dataTransfer.files[0];
+      if(file) handleProfileUpload(file);
+    });
+
+    function handleProfileUpload(file) {
+      if (isEditorLocked) return;
+      if(!file.type.startsWith("image/") && !/\.(jpg|jpeg|png|webp|gif|svg|avif)$/i.test(file.name)) {
+        alert("Selected file is not recognized as a standard image canvas. Please use a .jpg, .png, or .webp image.");
+        return;
+      }
+      compressImageFile(file, 250, 0.6, function(dataUri) {
+        profileImg.src = dataUri;
+        resumeImg.src = dataUri;
+        try {
+          localStorage.setItem("7jn_profile_image", dataUri);
+          alert("✅ Profile picture saved successfully!");
+        } catch(err) {
+          console.warn("localStorage quota limits, showing graphic in memory preview", err);
+          alert("⚠️ Portrait preview active but could not save permanently due to browser storage quota.");
+        }
+      });
+    }
+
+    // QR Payment Code Trigger bindings
+    const qrBox = document.getElementById('qr-drop-box');
+    const qrInput = document.getElementById('qr-file-input');
+    const qrImg = document.getElementById('payment-qr-img');
+    const qrDropText = document.getElementById('qr-drop-text');
+
+    // Restore cached qr elements
+    const savedQR = localStorage.getItem("7jn_payment_qr");
+    if(savedQR) qrImg.src = savedQR;
+
+    // Set initial display if locked
+    if (isEditorLocked && qrDropText) {
+      qrDropText.innerHTML = "🔒 PORT SECURE (Change Locked)";
+    }
+    if (isEditorLocked && profileDropText) {
+      profileDropText.innerHTML = "🔒 PORTRAIT SECURED (Tap Unlock to bypass)";
+    }
+
+    if (qrBox) {
+      qrBox.addEventListener('click', () => {
+        if (isEditorLocked) {
+          alert("🔒 SECURITY BLOCKED! Payment QR modification is locked to protect client routing integrity. Unlock the editor via the Lock panel first to modify.");
+          return;
+        }
+        qrInput.click();
+      });
+    }
+
+    if (qrInput) {
+      qrInput.addEventListener('change', (e) => {
+        if (isEditorLocked) return;
+        const file = e.target.files[0];
+        if (file) handleQRUpload(file);
+      });
+    }
+
+    if (qrBox) {
+      qrBox.addEventListener('dragenter', (e) => { 
+        if (isEditorLocked) return;
+        e.preventDefault(); 
+        qrDropText.textContent = "⚡ DROP PAY QR NOW"; 
+      });
+      qrBox.addEventListener('dragover', (e) => { e.preventDefault(); });
+      qrBox.addEventListener('dragleave', () => { 
+        if (isEditorLocked) return;
+        qrDropText.textContent = "📸 DROP OR CLICK"; 
+      });
+      qrBox.addEventListener('drop', (e) => {
+        e.preventDefault();
+        if (isEditorLocked) {
+          alert("🔒 SECURITY BLOCKED! Payment QR changes are locked. Please unlock the customization editor using the passcode first.");
+          return;
+        }
+        qrDropText.textContent = "📸 DROP OR CLICK";
+        const file = e.dataTransfer.files[0];
+        if(file) handleQRUpload(file);
+      });
+    }
+
+    function handleQRUpload(file) {
+      if (isEditorLocked) return;
+      if(!file.type.startsWith("image/") && !/\.(jpg|jpeg|png|webp|gif|svg|avif)$/i.test(file.name)) {
+        alert("Selected file is not recognized as a standard image check. Please use a .jpg, .png, or .webp image.");
+        return;
+      }
+      compressImageFile(file, 250, 0.6, function(dataUri){
+        qrImg.src = dataUri;
+        try {
+          localStorage.setItem("7jn_payment_qr", dataUri);
+          alert("✅ QR Code saved successfully!");
+        } catch(err){
+          console.warn("Storage limits, using visual buffer", err);
+          alert("⚠️ QR code preview active but could not save permanently due to browser storage quota.");
+        }
+      });
+    }
+
+    // 4. BOOKING FORM HANDLERS
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      alert("🎉 Verification Success!\nYour technical consulting parameters have been registered under strict confidentiality standard guidelines.");
+    }
+
+
+    // 5. 3D ROTATABLE CONSTELLATION HOLOGRAM PHYSICS DRAWER
+    const canvas = document.getElementById("constellationCanvas");
+    const ctx = canvas.getContext("2d");
+    const tooltip = document.getElementById("canvas-tooltip");
+    const tooltipTitle = document.getElementById("tooltip-title");
+    const tooltipDesc = document.getElementById("tooltip-desc");
+
+    let zoomMultiplier = 1.20;
+    let rotationAngle = { x: 0.005, y: -0.005 };
+    let stars = [];
+    let sparkles = [];
+    let isDraggingBackground = false;
+    let clickPos = { x: 0, y: 0 };
+    let previousClickPos = { x: 0, y: 0 };
+
+    const nodesData = [
+      { id: "home", x: -90, y: -70, z: 80, size: 8, label: "Jeddah's Welcome", sectionLink: "#home", color: "#f59e0b", info: "Start here: 7JN Tech Assist Core Solutions & Technical Overview" },
+      { id: "services", x: 90, y: -90, z: -50, size: 7, label: "Core Services", sectionLink: "#services", color: "#fbbf24", info: "Zendesk, Asana workflows, remote system backups, workflow pipelines" },
+      { id: "resume", x: 120, y: 70, z: 120, size: 9, label: "HTML Resume (Live)", sectionLink: "#resume", color: "#fbbf24", info: "Senior Analyst II (Global Banking Corp) & Tech Lead. Click to read her full credentials" },
+      { id: "packages", x: -140, y: 60, z: -60, size: 7, label: "Service Investment", sectionLink: "#packages", color: "#fbbf24", info: "Starter, Pro & Enterprise rates with 1-month included maintenance" },
+      { id: "schedule", x: -30, y: 130, z: 40, size: 9, label: "Booking Scheduler", sectionLink: "#schedule", color: "#fbbf24", info: "Instantly declare custom tickers, sign NDA agreements, & secure consultation" },
+      { id: "contact", x: -130, y: -120, z: 90, size: 6, label: "Connect Channels", sectionLink: "#contact", color: "#f59e0b", info: "Direct Messenger, social handles & FAQs" }
+    ];
+
+    const starLinks = [
+      ["home", "services"],
+      ["services", "resume"],
+      ["home", "packages"],
+      ["packages", "schedule"],
+      ["schedule", "contact"]
+    ];
+
+    function initStars() {
+      stars = nodesData.map(node => ({
+        ...node,
+        vx: (Math.random() - 0.5) * 0.08,
+        vy: (Math.random() - 0.5) * 0.08,
+        vz: (Math.random() - 0.5) * 0.08
+      }));
+    }
+
+    function resizeCanvas() {
+      const containerRect = canvas.parentElement.getBoundingClientRect();
+      canvas.width = containerRect.width;
+      canvas.height = containerRect.height || 500;
+    }
+
+    function project(x, y, z) {
+      const cx = canvas.width / 2;
+      const cy = canvas.height / 2;
+
+      // Rotational matrix coordinate formula
+      const cosY = Math.cos(rotationAngle.y);
+      const sinY = Math.sin(rotationAngle.y);
+      let x1 = x * cosY - z * sinY;
+      let z1 = x * sinY + z * cosY;
+
+      const cosX = Math.cos(rotationAngle.x);
+      const sinX = Math.sin(rotationAngle.x);
+      let y2 = y * cosX - z1 * sinX;
+      let z2 = y * sinX + z1 * cosX;
+
+      const fov = 350;
+      const divisor = fov + z2;
+      if (divisor <= 10) {
+        return {
+          x: cx,
+          y: cy,
+          z: z2,
+          scale: 0,
+          behind: true
+        };
+      }
+      const scale = (fov / divisor) * zoomMultiplier;
+
+      return {
+        x: cx + x1 * scale,
+        y: cy + y2 * scale,
+        z: z2,
+        scale: scale,
+        behind: false
+      };
+    }
+
+    function spawnExplosion(x, y, color = "#fbbf24") {
+      for (let i = 0; i < 22; i++) {
+        const ang = Math.random() * Math.PI * 2;
+        const sp = 1.5 + Math.random() * 3;
+        sparkles.push({
+          x: x,
+          y: y,
+          vx: Math.cos(ang) * sp,
+          vy: Math.sin(ang) * sp,
+          life: 0,
+          maxLife: 20 + Math.floor(Math.random() * 20),
+          color: color,
+          size: 1 + Math.random() * 2.5
+        });
+      }
+    }
+
+    function zoomInCanvas() {
+      zoomMultiplier = Math.min(2.5, zoomMultiplier + 0.15);
+      document.getElementById("canvas-zoom-text").textContent = Math.round(zoomMultiplier * 100) + "%";
+    }
+
+    function zoomOutCanvas() {
+      zoomMultiplier = Math.max(0.6, zoomMultiplier - 0.15);
+      document.getElementById("canvas-zoom-text").textContent = Math.round(zoomMultiplier * 100) + "%";
+    }
+
+    function checkStarAt(mx, my) {
+      for (let i = 0; i < stars.length; i++) {
+        const proj = project(stars[i].x, stars[i].y, stars[i].z);
+        const dist = Math.hypot(mx - proj.x, my - proj.y);
+        if (dist < stars[i].size * proj.scale + 14) {
+          return stars[i];
+        }
+      }
+      return null;
+    }
+
+    // Dynamic bindings for Rotatable Canvas interaction
+    canvas.addEventListener('mousedown', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      isDraggingBackground = true;
+      previousClickPos = { x: x, y: y };
+
+      const matchedStar = checkStarAt(x, y);
+      if (matchedStar) {
+        // Trigger explosion and open details popup
+        const proj = project(matchedStar.x, matchedStar.y, matchedStar.z);
+        spawnExplosion(proj.x, proj.y, matchedStar.color);
+        showTooltipOver(matchedStar, proj.x, proj.y);
+      } else {
+        tooltip.style.display = "none";
+      }
+    });
+
+    canvas.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      if (isDraggingBackground) {
+        const dx = x - previousClickPos.x;
+        const dy = y - previousClickPos.y;
+        rotationAngle.x += dy * 0.005;
+        rotationAngle.y += dx * 0.005;
+        previousClickPos = { x: x, y: y };
+      }
+
+      // Cursor details check
+      const hoverNode = checkStarAt(x, y);
+      canvas.style.cursor = hoverNode ? "pointer" : "grab";
+    });
+
+    window.addEventListener('mouseup', () => { isDraggingBackground = false; });
+
+    function showTooltipOver(star, px, py) {
+      tooltipTitle.textContent = star.label;
+      tooltipDesc.textContent = star.info;
+      tooltip.style.display = "block";
+      tooltip.style.left = Math.min(canvas.width - 290, Math.max(15, px - 140)) + "px";
+      tooltip.style.top = Math.min(canvas.height - 200, Math.max(15, py - 140)) + "px";
+      
+      // Bind click navigation helper
+      tooltip.onclick = function() {
+        const destination = document.querySelector(star.sectionLink);
+        if(destination) {
+          destination.scrollIntoView({ behavior: "smooth", block: "start" });
+          spawnExplosion(canvas.width / 2, canvas.height / 2, star.color);
+        }
+      };
+    }
+
+    function renderLoop() {
+      // Refresh Canvas Buffer
+      ctx.fillStyle = "#020408";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      const cx = canvas.width / 2;
+      const cy = canvas.height / 2;
+
+      // Background astrology concentric compass lines
+      ctx.strokeStyle = "rgba(217, 119, 6, 0.06)";
+      ctx.lineWidth = 1;
+      ctx.setLineDash([4, 12]);
+      const concentricRings = [120, 200, 300];
+      concentricRings.forEach(radius => {
+        ctx.beginPath();
+        ctx.arc(cx, cy, radius * zoomMultiplier, 0, Math.PI * 2);
+        ctx.stroke();
+      });
+      ctx.setLineDash([]);
+
+      // Subtle slow internal default rotation if user isn't actively manual dragging
+      if (!isDraggingBackground) {
+        rotationAngle.x += 0.0005;
+        rotationAngle.y += 0.0009;
+      }
+
+      // Draw structural constellation link cables
+      starLinks.forEach(pair => {
+        const s1 = stars.find(s => s.id === pair[0]);
+        const s2 = stars.find(s => s.id === pair[1]);
+        if (s1 && s2) {
+          const p1 = project(s1.x, s1.y, s1.z);
+          const p2 = project(s2.x, s2.y, s2.z);
+
+          // Standard wire curves with gravity depth offsets
+          const midX = (p1.x + p2.x) / 2;
+          const midY = (p1.y + p2.y) / 2 + 10;
+
+          ctx.strokeStyle = "rgba(245, 158, 11, 0.3)";
+          ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          ctx.moveTo(p1.x, p1.y);
+          ctx.quadraticCurveTo(midX, midY, p2.x, p2.y);
+          ctx.stroke();
+        }
+      });
+
+      // Draw primary Star Nodes sorted back-to-front
+      const tempProjected = stars.map(s => {
+        const proj = project(s.x, s.y, s.z);
+        return { original: s, proj: proj };
+      }).sort((a, b) => b.proj.z - a.proj.z);
+
+      tempProjected.forEach(item => {
+        const s = item.original;
+        const proj = item.proj;
+
+        const pulse = 1 + Math.sin(Date.now() * 0.002 + s.x) * 0.12;
+        const r = s.size * proj.scale * pulse;
+
+        // Halo glows
+        ctx.shadowBlur = 8 * proj.scale;
+        ctx.shadowColor = s.color;
+        
+        ctx.fillStyle = s.color;
+        ctx.beginPath();
+        ctx.arc(proj.x, proj.y, r, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.shadowBlur = 0; // Reset
+
+        // Label details below
+        ctx.fillStyle = "rgba(240, 244, 248, 0.8)";
+        ctx.font = "10px 'JetBrains Mono', monospace";
+        ctx.textAlign = "center";
+        ctx.fillText(s.label.toUpperCase(), proj.x, proj.y + r + 14);
+      });
+
+      // Sparks
+      for (let i = sparkles.length - 1; i >= 0; i--) {
+        const sp = sparkles[i];
+        sp.x += sp.vx;
+        sp.y += sp.vy;
+        sp.vx *= 0.95;
+        sp.vy *= 0.95;
+        sp.vy += 0.05; // gravity micro-pull
+        sp.life++;
+
+        const alpha = Math.max(0, 1 - sp.life / sp.maxLife);
+        ctx.fillStyle = sp.color;
+        ctx.globalAlpha = alpha;
+        ctx.beginPath();
+        ctx.arc(sp.x, sp.y, sp.size * alpha, 0, Math.PI * 2);
+        ctx.fill();
+
+        if (sp.life >= sp.maxLife) {
+          sparkles.splice(i, 1);
+        }
+      }
+      ctx.globalAlpha = 1.0;
+
+      requestAnimationFrame(renderLoop);
+    }
+
+    // Fire constellation script
+    initStars();
+    resizeCanvas();
+    renderLoop();
+    window.addEventListener('resize', resizeCanvas);
+
+  </script>
+</body>
+</html>

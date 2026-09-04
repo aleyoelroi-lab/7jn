@@ -1,0 +1,12 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+kimi_3.2.4.exe
+kimi_3.2.4.exe
+kimi_3.2.4.exe
+kimi_3.2.4.exe

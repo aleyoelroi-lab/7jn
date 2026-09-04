@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cinzel:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Didot", "GFS Didot", "Playfair Display", "Cormorant Garamond", "Cinzel", serif;
+  --font-display: "Didot", "GFS Didot", "Playfair Display", "Cormorant Garamond", "Cinzel", serif;
+  --font-mono: "Didot", "GFS Didot", "Playfair Display", "Cormorant Garamond", "Cinzel", serif;
+
+  --color-gold: #D4B896;
+  --color-gold-bright: #E0F0F5;
+  --color-gold-dim: #6A9AAA;
+  --color-gold-dark: #142A3A;
+  --color-bg-deep: #0A1A2A;
+  --color-bg-panel: #142A3A;
+  --color-text-main: #E0F0F5;
+  --color-text-dim: #6A9AAA;
+  --color-gold-border: rgba(0, 212, 255, 0.22);
+}
+
+*, ::before, ::after {
+  font-family: "Didot", "GFS Didot", "Playfair Display", "Cormorant Garamond", "Cinzel", serif !important;
+}
+
+:root {
+  --gold: #D4B896;
+  --gold-bright: #E0F0F5;
+  --gold-dim: #6A9AAA;
+  --gold-dark: #142A3A;
+  --bg: #0A1A2A;
+  --bg-panel: #142A3A;
+  --text: #E0F0F5;
+  --text-dim: #6A9AAA;
+  --border: rgba(0, 212, 255, 0.22);
+  --hologram: #00D4FF;
+  --glow-hologram: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+html {
+  font-size: 120% !important; /* 20% global font size increase */
+}
+
+:root.light {
+  --bg: #FAF7F2; /* Cream White */
+  --bg-panel: #F4EFE6; /* Warm Cream Panel Surface */
+  --text: #0A0B0E; /* Shiny Black */
+  --text-dim: #132238; /* Crisp Deep Dark Blue-Slate */
+  --border: rgba(14, 31, 61, 0.18); /* Elegant Dark Blue Separator */
+  --dark-blue: #0E1F3D; /* Imperial Dark Blue */
+  --glitter-gold: #B88A44; /* Glittery Brown Gold */
+  --hologram: #0E1F3D;
+  --glow-hologram: 0 0 20px rgba(184, 138, 68, 0.35);
+}
+
+/* Light Theme Color Mapping & Readability Constraints */
+/* Universal Shiny Black Text in Light Mode - High Contrast, Crisp, Luxurious */
+html.light,
+html.light body,
+html.light p,
+html.light span,
+html.light label,
+html.light input,
+html.light textarea,
+html.light select,
+html.light li,
+html.light div,
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4,
+html.light h5,
+html.light h6,
+html.light button,
+html.light button *,
+html.light a,
+html.light a *,
+html.light svg,
+html.light i,
+html.light em,
+html.light strong,
+html.light b,
+html.light .font-display,
+html.light [class*="text-"] {
+  color: #0A0B0E !important; /* Shiny Black - High contrast readable */
+  font-weight: 700 !important; /* Crisp, readable boldness */
+  text-shadow: none !important;
+}
+
+/* Glittery Brown Gold for luxury brand accents */
+html.light .text-gold,
+html.light .text-\[\#DFBA6B\],
+html.light .text-\[\#EAD890\],
+html.light .text-\[\#C9A84C\],
+html.light .text-yellow-400,
+html.light .text-yellow-550,
+html.light .text-yellow-500,
+html.light .text-amber-400,
+html.light [class*="text-gold"],
+html.light [class*="text-[#DFBA6B]"],
+html.light [class*="text-[#EAD890]"],
+html.light [class*="text-[#C9A84C]"],
+html.light [class*="text-yellow-"],
+html.light [class*="text-amber-"],
+html.light [class*="text-gold"] * {
+  color: #8C6527 !important; /* Glittery Brown Gold */
+  font-weight: 850 !important;
+  text-shadow: none !important;
+}
+
+/* Dark Blue text & icon accents in Light Mode */
+html.light .text-dark-blue,
+html.light .text-cyan-400,
+html.light .text-teal-400,
+html.light .text-blue-400,
+html.light [class*="text-cyan-"],
+html.light [class*="text-teal-"],
+html.light [class*="text-blue-"] {
+  color: #0E1F3D !important; /* Imperial Dark Blue */
+  font-weight: 800 !important;
+}
+
+/* Subtitle & muted text in deep navy slate for high contrast AA/AAA */
+html.light [class*="text-zinc-400"],
+html.light [class*="text-zinc-500"],
+html.light [class*="text-slate-400"],
+html.light [class*="text-slate-500"],
+html.light [class*="text-[#9A958D]"],
+html.light .text-light-teal-on-dark,
+html.light .text-zinc-400-on-dark {
+  color: #1A283D !important; /* Deep Dark Blue Charcoal */
+  font-weight: 650 !important;
+}
+
+/* Force Light Mode Main Background Colors - Pure Luxurious Cream White */
+html.light body,
+html.light .min-h-screen,
+html.light #root,
+html.light [className*="bg-\[\#FAF9F6\]"],
+html.light [className*="bg-\[\#FAF7F2\]"] {
+  background-color: #FAF7F2 !important;
+  background-image: none !important;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #FAF7F2 !important;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #B88A44 !important; /* Glittery Brown Gold */
+  border-radius: 4px;
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #0E1F3D !important; /* Imperial Dark Blue */
+}
+
+/* Force Card, Surface, Panels and Form Container Backgrounds to Cream White Panel (#F4EFE6) */
+html.light [class*="bg-"]:not([class*="FAF7F2"]):not([class*="transparent"]):not(input):not(textarea):not(select):not([class*="dark-blue"]):not([class*="from-[#DFBA6B]"]):not([class*="bg-[#DFBA6B]"]):not(.btn-dark-solid) {
+  background-color: #F4EFE6 !important;
+  background-image: none !important;
+}
+
+/* Target specific dark container elements */
+html.light .bg-zinc-950,
+html.light .bg-zinc-900,
+html.light .bg-black,
+html.light .bg-slate-900,
+html.light .bg-gradient-to-br,
+html.light [class*="bg-[#020408]"],
+html.light [class*="bg-[#050505]"],
+html.light [class*="bg-[#141414]"],
+html.light [class*="bg-[#1C1917]"],
+html.light [class*="bg-[#030303]"],
+html.light [class*="bg-[rgba(5,5,5"],
+html.light [class*="bg-[#DFBA6B]/5"],
+html.light [class*="bg-[#DFBA6B]/10"],
+html.light [class*="bg-[#C9A84C]/10"],
+html.light [class*="bg-zinc-"],
+html.light [class*="bg-slate-"],
+html.light [class*="bg-black"] {
+  background-color: #F4EFE6 !important;
+  background-image: none !important;
+}
+
+/* Input Fields and Select/Dropdown Specific Layout & Text Overrides */
+html.light input,
+html.light textarea,
+html.light select {
+  background-color: #FCFAF6 !important; /* Crisp high-contrast bright cream */
+  color: #0A0B0E !important; /* Shiny Black */
+  border-color: rgba(14, 31, 61, 0.26) !important; /* Dark Blue delicate border */
+  border-width: 1.5px !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #4A5B78 !important; /* Slate dark blue placeholder text */
+  opacity: 1 !important;
+}
+
+/* Glittery Brown Gold Accent Fills */
+html.light .bg-\[\#DFBA6B\],
+html.light .bg-gradient-to-r.from-\[\#DFBA6B\],
+html.light .bg-gradient-to-tr.from-\[\#DFBA6B\],
+html.light .bg-gold,
+html.light .bg-yellow-500,
+html.light .bg-yellow-400 {
+  background: linear-gradient(135deg, #A87C38 0%, #C99E54 50%, #8C6225 100%) !important; /* Glittery Brown Gold */
+  box-shadow: 0 0 15px rgba(184, 138, 68, 0.35) !important;
+}
+
+/* Make sure text on glittery brown gold buttons is shiny black */
+html.light button.bg-gradient-to-r[class*="from-[#DFBA6B]"],
+html.light button.bg-gradient-to-tr[class*="from-[#DFBA6B]"],
+html.light button[class*="bg-[#DFBA6B]"],
+html.light a[class*="bg-[#DFBA6B]"],
+html.light [class*="bg-gradient-to-r"][class*="from-[#DFBA6B]"] *,
+html.light button.bg-gradient-to-r[class*="from-[#DFBA6B]"] * {
+  color: #0A0B0E !important; /* Shiny Black text on brown-gold */
+  font-weight: 850 !important;
+  text-shadow: none !important;
+}
+
+/* ALL buttons in light mode default to readable styling - NO unreadable white text */
+html.light button {
+  color: #0A0B0E !important;
+  font-weight: 750 !important;
+}
+
+html.light button * {
+  color: #0A0B0E !important;
+}
+
+/* Specific button overrides */
+/* 1. Accordion & Collapsible Section buttons (FAQ, Services, Tabs, Details) */
+html.light button[class*="text-left"],
+html.light button[class*="w-full"] {
+  background-color: transparent !important;
+  color: #0A0B0E !important;
+}
+html.light button[class*="text-left"] *,
+html.light button[class*="w-full"] * {
+  color: #0A0B0E !important;
+}
+
+/* Icons inside collapsible buttons keep their accents */
+html.light button .text-\[\#C9A84C\],
+html.light button .text-yellow-400,
+html.light button .text-yellow-500,
+html.light button [class*="text-yellow-"] {
+  color: #8C6527 !important;
+}
+
+/* 2. Secondary & Outline Action Buttons */
+html.light button.bg-zinc-950,
+html.light button.bg-zinc-900,
+html.light button[class*="bg-zinc-900"],
+html.light button[class*="bg-zinc-950"] {
+  background-color: #FAF7F2 !important;
+  border-color: rgba(14, 31, 61, 0.25) !important;
+  color: #0A0B0E !important;
+}
+html.light button.bg-zinc-950:hover,
+html.light button.bg-zinc-900:hover,
+html.light button[class*="bg-zinc-900"]:hover,
+html.light button[class*="bg-zinc-950"]:hover {
+  background-color: #0E1F3D !important;
+  border-color: #B88A44 !important;
+  color: #FFFFFF !important;
+}
+html.light button.bg-zinc-950:hover *,
+html.light button.bg-zinc-900:hover *,
+html.light button[class*="bg-zinc-900"]:hover *,
+html.light button[class*="bg-zinc-950"]:hover * {
+  color: #FFFFFF !important;
+}
+
+/* 3. Solid Imperial Dark Blue Buttons (only when explicitly filled or on dark-solid) */
+html.light .btn-dark-solid,
+html.light button.btn-dark-solid {
+  background-color: #0E1F3D !important;
+  border: 1px solid #B88A44 !important;
+  color: #FFFFFF !important;
+}
+html.light .btn-dark-solid *,
+html.light button.btn-dark-solid * {
+  color: #FFFFFF !important;
+}
+
+/* Border mappings: Dark Blue separators with Glittery Brown Gold accents */
+html.light [class*="border-zinc-"],
+html.light [class*="border-slate-"],
+html.light [class*="border-black"],
+html.light .border,
+html.light [class*="border-t"],
+html.light [class*="border-b"],
+html.light [class*="border-l"],
+html.light [class*="border-r"] {
+  border-color: rgba(14, 31, 61, 0.16) !important; /* Delicate Dark Blue borders */
+}
+
+html.light [class*="border-yellow-"],
+html.light [class*="border-amber-"],
+html.light [class*="border-gold"],
+html.light [class*="border-[#DFBA6B]"],
+html.light [class*="border-[#C9A84C]"] {
+  border-color: #B88A44 !important; /* Glittery Brown Gold */
+  box-shadow: 0 0 10px rgba(184, 138, 68, 0.15);
+}
+
+html.light .bg-yellow-500\/10,
+html.light .bg-yellow-400\/10 {
+  background-color: rgba(184, 138, 68, 0.12) !important;
+}
+
+/* Category Badge in Light Mode: Dark Blue with Glittery Brown Gold border */
+html.light .category-badge {
+  background-color: #0E1F3D !important; /* Imperial Dark Blue */
+  color: #FFFDF0 !important;
+  border: 1px solid #B88A44 !important; /* Glittery Brown Gold */
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  text-shadow: none !important;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Didot", "GFS Didot", "Playfair Display", "Cormorant Garamond", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-synthesis: none;
+}
+
+/* Custom utility overrides with 20% global increase */
+.text-\[8px\],
+.text-\[9px\],
+.text-\[10px\] {
+  font-size: 14.4px !important;
+}
+
+.text-\[11px\],
+.text-xs {
+  font-size: 16.8px !important;
+}
+
+/* 30 times lighter or clearer rule for all fonts in dark theme without exception */
+html:not(.light),
+html:not(.light) *,
+html:not(.light) body,
+html:not(.light) p,
+html:not(.light) span,
+html:not(.light) h1,
+html:not(.light) h2,
+html:not(.light) h3,
+html:not(.light) h4,
+html:not(.light) h5,
+html:not(.light) h6,
+html:not(.light) a,
+html:not(.light) li,
+html:not(.light) label,
+html:not(.light) input,
+html:not(.light) textarea,
+html:not(.light) select,
+html:not(.light) button {
+  color: #F7FCFE !important;
+  font-weight: 550 !important; /* Lighter, clearer, bolder font weight */
+  text-shadow: 0 0 6px rgba(247, 252, 254, 0.25) !important;
+}
+
+:root:not(.light) p, :root:not(.light) li {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Background overrides for Deep Ocean & Card Bg */
+:root:not(.light) body,
+:root:not(.light) .bg-zinc-950,
+:root:not(.light) .bg-black,
+:root:not(.light) .bg-\[\#020408\],
+:root:not(.light) .bg-\[\#050505\] {
+  background-color: #0A1A2A !important;
+}
+
+:root:not(.light) .bg-zinc-900,
+:root:not(.light) .bg-zinc-900\/20,
+:root:not(.light) .bg-zinc-900\/30,
+:root:not(.light) .bg-zinc-900\/40,
+:root:not(.light) .bg-zinc-900\/50,
+:root:not(.light) .bg-zinc-950\/40,
+:root:not(.light) .bg-zinc-950\/70,
+:root:not(.light) .bg-zinc-950\/50,
+:root:not(.light) .bg-zinc-950\/80,
+:root:not(.light) .bg-zinc-950\/90,
+:root:not(.light) .bg-\[\#020408\]\/85 {
+  background-color: #142A3A !important;
+}
+
+/* Accent (sunlight) golden reflection */
+:root:not(.light) .text-yellow-400,
+:root:not(.light) .text-yellow-500,
+:root:not(.light) .text-amber-400,
+:root:not(.light) .text-\[\#DFBA6B\],
+:root:not(.light) .text-\[\#EAD890\],
+:root:not(.light) .text-gold {
+  color: #D4B896 !important;
+}
+
+:root:not(.light) .bg-\[\#DFBA6B\],
+:root:not(.light) .bg-gradient-to-r.from-\[\#DFBA6B\] {
+  background-color: #D4B896 !important;
+}
+
+/* Make sure all text/icons on gold buttons and gradients in dark mode are rich dark bronze/gold for high readability */
+html:not(.light) button.bg-gradient-to-r[class*="from-[#DFBA6B]"],
+html:not(.light) button.bg-gradient-to-tr[class*="from-[#DFBA6B]"],
+html:not(.light) button[class*="bg-[#DFBA6B]"],
+html:not(.light) a[class*="bg-[#DFBA6B]"],
+html:not(.light) [class*="bg-gradient-to-r"][class*="from-[#DFBA6B]"] button,
+html:not(.light) [class*="bg-gradient-to-r"][class*="from-[#DFBA6B]"] span,
+html:not(.light) [class*="bg-gradient-to-r"][class*="from-[#DFBA6B]"] p,
+html:not(.light) [class*="bg-gradient-to-r"][class*="from-[#DFBA6B]"] div,
+html:not(.light) [class*="bg-gradient-to-r"][class*="from-[#DFBA6B]"] h4,
+html:not(.light) [class*="bg-gradient-to-r"][class*="from-[#DFBA6B]"],
+html:not(.light) button.bg-gradient-to-r[class*="from-[#DFBA6B]"] *,
+html:not(.light) button.bg-gradient-to-tr[class*="from-[#DFBA6B]"] *,
+html:not(.light) button[class*="bg-[#DFBA6B]"] * {
+  color: #3B2503 !important; /* Premium rich deep dark gold/bronze for excellent contrast */
+  text-shadow: none !important;
+  font-weight: 850 !important;
+}
+
+/* Hologram accent (glowing blue) overrides */
+:root:not(.light) .text-cyan-400,
+:root:not(.light) .text-teal-400,
+:root:not(.light) .text-blue-400 {
+  color: #00D4FF !important;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+}
+
+/* Holographic borders with glow effects */
+:root:not(.light) .border-zinc-900,
+:root:not(.light) .border-zinc-850,
+:root:not(.light) .border-zinc-805,
+:root:not(.light) .border-zinc-800,
+:root:not(.light) .border-yellow-500\/10,
+:root:not(.light) .border-yellow-500\/20,
+:root:not(.light) .border-yellow-500\/30,
+:root:not(.light) .border-yellow-400\/10,
+:root:not(.light) .border-yellow-400\/20,
+:root:not(.light) .border-yellow-400\/30,
+:root:not(.light) .border-\[\#DFBA6B\]\/20,
+:root:not(.light) .border-\[\#DFBA6B\]\/30 {
+  border-color: rgba(0, 212, 255, 0.22) !important;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.05);
+}
+
+/* Hologram Glow utility class */
+.glow-hologram {
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3) !important;
+}
+
+/* Custom black-and-gold aesthetic utilities with new deep ocean palette */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A1A2A;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4B896; /* golden reflection */
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00D4FF; /* glowing hologram blue */
+}
+
+/* Custom fade effects */
+@keyframes slideInRight {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scan {
+  0%, 100% {
+    top: 0%;
+  }
+  50% {
+    top: 100%;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Dark Theme Contrast Fix: Grainy Dark Gold for Category Badges */
+html:not(.light) .category-badge {
+  color: #2F1F04 !important; /* Deep grainy dark gold color */
+  font-weight: 900 !important;
+  letter-spacing: 0.12em !important;
+  text-shadow: 0.5px 0.5px 1px rgba(254, 240, 138, 0.5) !important; /* Elegant golden backlight for a grainy/metallic etched look */
+  background-color: #FCD34D !important; /* Warm gold-yellow background */
+  border: 1px solid rgba(47, 31, 4, 0.35) !important;
+}
+
+/* Print Overrides */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  nav, footer, .print-hidden, .no-print {
+    display: none !important;
+  }
+}
+
