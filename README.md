@@ -1,16 +1,17 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# 7JN Tech Assist | Digital Solutions
 
-# Run and deploy your AI Studio app
+Premium web development, AI integration, and digital solutions for modern businesses.
 
-This contains everything you need to run your app locally.
+## Contact
+- Website: [7jntech.com](https://7jntech.com)
+- Email: aleyoelroi@gmail.com
+- Jeddah San Pait
 
-View your app in AI Studio: https://ai.studio/apps/074cf022-9b26-45e6-9950-15b484b1ad0a
-
-## Run Locally
-
+© 2026 7J&Tech. All rights reserved
 **Prerequisites:**  Node.js
+
+Deployed via GitHub Pages
+
 
 
 1. Install dependencies:
